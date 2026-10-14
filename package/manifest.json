@@ -45,6 +45,7 @@
         "gif-picker.css",
         "gif-picker.js",
         "assets/icons/*",
+        "assets/sample_gifs.json",
         "src/providers/*",
         "src/utils/*"
       ],

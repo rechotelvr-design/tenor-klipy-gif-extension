@@ -1,0 +1,67 @@
+[
+  {
+    "id": "sample-tenor-1",
+    "title": "Clap GIF",
+    "provider": "tenor",
+    "previewUrl": "https://via.placeholder.com/320x180.png?text=Tenor+GIF+1",
+    "gifUrl": "https://via.placeholder.com/480x270.png?text=Tenor+GIF+1",
+    "pageUrl": "https://tenor.com/",
+    "width": 480,
+    "height": 270,
+    "description": "Sample Tenor GIF",
+    "attribution": null,
+    "mediaType": "gif"
+  },
+  {
+    "id": "sample-klipy-1",
+    "title": "Happy Dance",
+    "provider": "klipy",
+    "previewUrl": "https://via.placeholder.com/320x180.png?text=Klipy+Image+1",
+    "gifUrl": "https://via.placeholder.com/480x270.png?text=Klipy+Image+1",
+    "pageUrl": "https://klipy.com/",
+    "width": 480,
+    "height": 270,
+    "description": "Sample Klipy Image",
+    "attribution": null,
+    "mediaType": "image"
+  },
+  {
+    "id": "sample-tenor-2",
+    "title": "Thumbs Up",
+    "provider": "tenor",
+    "previewUrl": "https://via.placeholder.com/320x180.png?text=Tenor+GIF+2",
+    "gifUrl": "https://via.placeholder.com/480x270.png?text=Tenor+GIF+2",
+    "pageUrl": "https://tenor.com/",
+    "width": 480,
+    "height": 270,
+    "description": "Sample Tenor GIF 2",
+    "attribution": null,
+    "mediaType": "gif"
+  },
+  {
+    "id": "sample-klipy-2",
+    "title": "LOL",
+    "provider": "klipy",
+    "previewUrl": "https://via.placeholder.com/320x180.png?text=Klipy+GIF+2",
+    "gifUrl": "https://via.placeholder.com/480x270.png?text=Klipy+GIF+2",
+    "pageUrl": "https://klipy.com/",
+    "width": 480,
+    "height": 270,
+    "description": "Sample Klipy GIF",
+    "attribution": null,
+    "mediaType": "gif"
+  },
+  {
+    "id": "sample-tenor-3",
+    "title": "Wave",
+    "provider": "tenor",
+    "previewUrl": "https://via.placeholder.com/320x180.png?text=Tenor+Image+3",
+    "gifUrl": "https://via.placeholder.com/480x270.png?text=Tenor+Image+3",
+    "pageUrl": "https://tenor.com/",
+    "width": 480,
+    "height": 270,
+    "description": "Sample Tenor Image",
+    "attribution": null,
+    "mediaType": "image"
+  }
+]

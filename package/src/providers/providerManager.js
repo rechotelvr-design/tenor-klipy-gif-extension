@@ -10,11 +10,27 @@ export function resolveProviders(providerPreference = 'all') {
   return allProviders.filter((provider) => provider === providerPreference);
 }
 
+async function loadSample() {
+  try {
+    const url = chrome.runtime.getURL('assets/sample_gifs.json');
+    const response = await fetch(url);
+    if (!response.ok) return [];
+    const data = await response.json();
+    return Array.isArray(data) ? data : [];
+  } catch (e) {
+    console.warn('Could not load sample gifs', e);
+    return [];
+  }
+}
+
 export async function searchGifs({ query = '', provider = 'all', limit = 12 } = {}) {
   const providers = resolveProviders(provider);
-  if (providers.length === 0) return [];
-
   const results = [];
+
+  if (providers.length === 0) {
+    const sample = await loadSample();
+    return sample.slice(0, limit);
+  }
 
   for (const selectedProvider of providers) {
     try {
@@ -34,14 +50,22 @@ export async function searchGifs({ query = '', provider = 'all', limit = 12 } = 
     }
   }
 
-  return deduplicateGifs(results).slice(0, limit);
+  const merged = deduplicateGifs(results).slice(0, limit);
+  if (merged.length === 0) {
+    const sample = await loadSample();
+    return sample.slice(0, limit);
+  }
+  return merged;
 }
 
 export async function fetchTrendingGifs({ provider = 'all', limit = 12 } = {}) {
   const providers = resolveProviders(provider);
-  if (providers.length === 0) return [];
-
   const results = [];
+
+  if (providers.length === 0) {
+    const sample = await loadSample();
+    return sample.slice(0, limit);
+  }
 
   for (const selectedProvider of providers) {
     try {
@@ -61,5 +85,10 @@ export async function fetchTrendingGifs({ provider = 'all', limit = 12 } = {}) {
     }
   }
 
-  return deduplicateGifs(results).slice(0, limit);
+  const merged = deduplicateGifs(results).slice(0, limit);
+  if (merged.length === 0) {
+    const sample = await loadSample();
+    return sample.slice(0, limit);
+  }
+  return merged;
 }
