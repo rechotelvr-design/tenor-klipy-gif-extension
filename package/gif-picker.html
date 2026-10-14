@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GIF Picker</title>
+    <link rel="stylesheet" href="gif-picker.css" />
+  </head>
+  <body>
+    <div class="picker-shell">
+      <header class="picker-header">
+        <div class="search-row">
+          <input id="searchInput" placeholder="Search Tenor & Klipy" />
+          <button id="searchBtn">Search</button>
+        </div>
+        <div class="provider-row">
+          <label><input type="checkbox" name="provider" value="tenor" checked /> Tenor</label>
+          <label><input type="checkbox" name="provider" value="klipy" checked /> Klipy</label>
+          <button id="closeBtn" class="close">×</button>
+        </div>
+      </header>
+
+      <main id="results" class="picker-results">Loading…</main>
+
+      <footer class="picker-footer">
+        <small>Powered by Tenor & Klipy — click a GIF to insert its link into the page.</small>
+      </footer>
+    </div>
+
+    <template id="resultTpl">
+      <article class="gif-card">
+        <img class="gif-thumb" alt="GIF" />
+      </article>
+    </template>
+
+    <script type="module" src="gif-picker.js"></script>
+  </body>
+</html>

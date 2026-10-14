@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Tenor + Klipy GIF Browser",
-  "version": "1.0.0",
-  "description": "Search, preview, and copy animated GIFs from Tenor and Klipy in one popup interface.",
+  "version": "1.1.0",
+  "description": "Search, preview, and copy animated GIFs from Tenor and Klipy in one popup interface. Injects a GIF picker button into YouTube comment/reply boxes.",
   "permissions": [
     "storage",
     "activeTab"
@@ -30,5 +30,25 @@
   },
   "background": {
     "service_worker": "background.js"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content_scripts/youtube-inject.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "gif-picker.html",
+        "gif-picker.css",
+        "gif-picker.js",
+        "assets/icons/*",
+        "src/providers/*",
+        "src/utils/*"
+      ],
+      "matches": ["*://*.youtube.com/*"]
+    }
+  ]
 }

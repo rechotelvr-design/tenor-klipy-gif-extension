@@ -1,2 +1,1 @@
-# tenor-klipy-gif-extension
-Tenor + Klipy GIF browser extension (Manifest V3) — search, preview, and insert GIFs from Tenor and Klipy.
+Updated README: document YouTube injection feature and how to load package/ as unpacked extension.
