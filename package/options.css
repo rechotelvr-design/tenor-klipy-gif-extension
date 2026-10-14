@@ -1,0 +1,99 @@
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --panel-alt: #1f2937;
+  --border: #374151;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --primary: #7dd3fc;
+  --secondary: #1f2937;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0f172a, #111827);
+  color: var(--text);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.settings-shell {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 18px 60px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgba(17, 24, 39, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.field span {
+  color: var(--muted);
+}
+
+input, select, button {
+  font: inherit;
+}
+
+input, select {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--panel-alt);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 11px 16px;
+  font-weight: 700;
+  background: var(--primary);
+  color: #052a3d;
+}
+
+button.secondary {
+  background: var(--secondary);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.note {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.save-status {
+  min-height: 24px;
+  margin-top: 14px;
+  color: #b7f7d6;
+}

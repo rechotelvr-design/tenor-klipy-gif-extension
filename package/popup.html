@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIF Browser</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="header">
+        <div class="title-row">
+          <h1>GIF Browser</h1>
+          <button id="settingsBtn" class="ghost-button" type="button">Settings</button>
+        </div>
+
+        <form id="searchForm" class="search-form">
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Search Tenor and Klipy GIFs"
+            aria-label="Search GIFs"
+          />
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="provider-filters" aria-label="Provider filters">
+          <label><input type="checkbox" name="provider" value="tenor" checked /> Tenor</label>
+          <label><input type="checkbox" name="provider" value="klipy" checked /> Klipy</label>
+        </div>
+      </header>
+
+      <main>
+        <section id="status" class="status" aria-live="polite"></section>
+        <section id="results" class="results" aria-live="polite"></section>
+      </main>
+    </div>
+
+    <template id="gifCardTemplate">
+      <article class="gif-card">
+        <div class="gif-preview-wrapper">
+          <img class="gif-preview" alt="" loading="lazy" />
+          <div class="gif-loading">Loading…</div>
+        </div>
+        <div class="gif-meta">
+          <p class="gif-title"></p>
+          <span class="gif-provider"></span>
+        </div>
+        <div class="gif-actions">
+          <button class="copy-btn" type="button">Copy link</button>
+          <a class="open-btn" href="#" target="_blank" rel="noreferrer noopener">Open</a>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

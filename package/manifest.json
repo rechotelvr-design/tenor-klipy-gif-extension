@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Tenor + Klipy GIF Browser",
+  "version": "1.0.0",
+  "description": "Search, preview, and copy animated GIFs from Tenor and Klipy in one popup interface.",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [],
+  "action": {
+    "default_title": "GIF Browser",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon-16.svg",
+      "32": "assets/icons/icon-32.svg",
+      "48": "assets/icons/icon-48.svg",
+      "128": "assets/icons/icon-128.svg"
+    }
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "assets/icons/icon-16.svg",
+    "32": "assets/icons/icon-32.svg",
+    "48": "assets/icons/icon-48.svg",
+    "128": "assets/icons/icon-128.svg"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}

@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GIF Browser Settings</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="settings-shell">
+      <h1>GIF Browser Settings</h1>
+
+      <section class="card">
+        <h2>General</h2>
+        <label class="field">
+          <span>Default provider</span>
+          <select id="defaultProvider">
+            <option value="all">All providers</option>
+            <option value="tenor">Tenor</option>
+            <option value="klipy">Klipy</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Results per page</span>
+          <input id="resultsLimit" type="number" min="6" max="30" step="1" value="12" />
+        </label>
+      </section>
+
+      <section class="card">
+        <h2>API settings</h2>
+        <label class="field">
+          <span>Tenor API key</span>
+          <input id="tenorApiKey" type="text" placeholder="YOUR_TENOR_API_KEY" />
+        </label>
+        <label class="field">
+          <span>Klipy API key</span>
+          <input id="klipyApiKey" type="text" placeholder="YOUR_KLIPY_API_KEY" />
+        </label>
+        <p class="note">
+          Browser extensions cannot safely store sensitive secrets in a public bundle. Prefer a backend proxy if you are integrating production credentials.
+        </p>
+      </section>
+
+      <div class="actions">
+        <button id="saveBtn" type="button">Save settings</button>
+        <button id="resetBtn" type="button" class="secondary">Reset</button>
+      </div>
+
+      <p id="saveStatus" class="save-status" aria-live="polite"></p>
+    </main>
+
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
